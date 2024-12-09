@@ -28,6 +28,42 @@
         .hero p {
             font-size: 1.2rem;
         }
+        .reservation-form {
+            max-width: 600px;
+            margin: 2rem auto;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .reservation-form h2 {
+            text-align: center;
+            color: #ff99aa;
+        }
+        .reservation-form label {
+            display: block;
+            margin: 0.5rem 0 0.2rem;
+        }
+        .reservation-form input,
+        .reservation-form textarea,
+        .reservation-form select,
+        .reservation-form button {
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        .reservation-form button {
+            background-color: #ff99aa;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .reservation-form button:hover {
+            background-color: #e88a97;
+        }
         footer {
             background-color: #ff99aa;
             color: white;
@@ -45,6 +81,31 @@
     <div class="hero">
         <h2>Bienvenue chez Bulle de Soin</h2>
         <p>Nous vous offrons des soins relaxants dans une ambiance apaisante.</p>
+    </div>
+    <div class="reservation-form">
+        <h2>Réservez une séance</h2>
+        <form action="https://formspree.io/f/{your_form_id}" method="POST">
+            <label for="name">Nom complet :</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Adresse email :</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="service">Choisissez un service :</label>
+            <select id="service" name="service" required>
+                <option value="massage-relaxant">Massage relaxant</option>
+                <option value="soin-visage">Soin du visage</option>
+                <option value="aromatherapie">Aromathérapie</option>
+            </select>
+
+            <label for="date">Date préférée :</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="message">Message (optionnel) :</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+
+            <button type="submit">Envoyer la réservation</button>
+        </form>
     </div>
     <footer>
         <p>© 2024 Bulle de Soin - Tous droits réservés</p>
